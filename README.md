@@ -50,7 +50,7 @@ VALUES
 INSERT INTO orders (order_id,product_id, user_id, total,DATE,STATUS)
 VALUES ('90', '11', '21','900','2024-11-11','confirm');
 
-#QUERIES#
+
 SELECT STATUS FROM orders WHERE order_id='90';
 SELECT SUM(total) FROM orders WHERE order_id='90';
 UPDATE address SET city = 'Bhopal' WHERE pincode = '452010';
