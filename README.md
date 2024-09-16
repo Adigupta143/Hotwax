@@ -3,7 +3,9 @@ Assignments
 #Assignment-1
 
 CREATE DATABASE hotwax;
+
 USE hotwax;
+
 CREATE TABLE products (
     product_id VARCHAR(26) PRIMARY KEY,
     product_name VARCHAR(100),
@@ -11,6 +13,7 @@ CREATE TABLE products (
     product_returnable VARCHAR(10),
     OWNER VARCHAR(100)
 );
+
 CREATE TABLE users (
     user_id VARCHAR(20) PRIMARY KEY,
     first_name VARCHAR(50),
@@ -50,11 +53,16 @@ VALUES
 INSERT INTO orders (order_id,product_id, user_id, total,DATE,STATUS)
 VALUES ('90', '11', '21','900','2024-11-11','confirm');
 
+**#QUERIES#**
 
 SELECT STATUS FROM orders WHERE order_id='90';
+
 SELECT SUM(total) FROM orders WHERE order_id='90';
+
 UPDATE address SET city = 'Bhopal' WHERE pincode = '452010';
+
 UPDATE products SET product_description='puma-xxl' WHERE product_id='12';
+
 SELECT * FROM products WHERE product_returnable = 'yes';
 
 ![ER DIAGRAM](https://github.com/user-attachments/assets/3cc6aba8-2813-4f66-8c69-2c7a93637efb)
